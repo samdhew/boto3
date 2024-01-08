@@ -33,3 +33,8 @@ Execute the script in a Python environment. Ensure that the necessary dependenci
 
 ```bash
 python script_name.py
+```
+
+**Note:** Make sure to have the appropriate AWS credentials configured on your system.
+
+Feel free to customize the script to fit your specific needs and always exercise caution when performing cleanup operations in a production environment.
