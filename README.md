@@ -1,40 +1,29 @@
-# AWS AMI Cleanup Script
+# Boto3 AWS Scripts Repository
 
-This script, adapted and inspired by [Ranman's blog post](http://blog.ranman.org/cleaning-up-aws-with-boto3/) and [luhn's Gist](https://gist.github.com/luhn/802f33ce763452b7c3b32bb594e0d54d), is designed to clean up unused and outdated Amazon Machine Images (AMIs) and their associated snapshots on your AWS account.
+Welcome to the Boto3 AWS Scripts Repository! This collection houses day-to-day Boto3 scripts that you may find useful for various tasks when working with Amazon Web Services (AWS).
+
+## Overview
+
+This repository serves as a handy resource for Boto3 scripts, offering solutions and automation for common scenarios encountered while interacting with AWS services.
+
+## Contents
+
+The scripts cover a range of functionalities, including but not limited to:
+
+- Delete unused EC2 AMIs and Snapshot of those AMIs
+
+Feel free to explore the scripts and leverage them to streamline your AWS workflows.
 
 ## Usage
 
-1. Set the `ACCOUNT_ID` variable to your AWS account ID.
-2. Adjust the `AMI_NAME` variable to match the naming pattern of the AMIs you want to consider for deletion.
-3. Run the script.
+Clone the repository to your local environment and navigate through the script files based on your specific needs. Each script is designed to address a particular use case, and usage instructions or modifications are typically provided within the script comments.
 
-## Functionality
+## Contributions
 
-The script performs the following tasks:
+If you have additional scripts or improvements to existing ones, we encourage you to contribute to the repository. Fork the project, make your changes, and submit a pull request. Let's collaborate to make this repository a valuable resource for the AWS developer community.
 
-1. Identifies AMIs owned by your account that match the specified name pattern.
-2. Filters out AMIs currently in use by running instances.
-3. Retains AMIs created within the last four weeks.
-4. Retains the latest version of each named AMI.
-5. Logs the deregistration of unused and outdated AMIs in a file named `deleteAMIs_TIMESTAMP.txt`.
+## License
 
-**Note:** Actual deletion of AMIs is commented out in the code to prevent accidental removal. Uncomment the relevant lines in the script (`image.deregister()`) to enable deletion.
+This repository is licensed under the [MIT License](LICENSE). Feel free to use, modify, and share the scripts in accordance with the license terms.
 
-## File Output
-
-The script generates two log files:
-
-- `deleteAMIs_TIMESTAMP.txt`: Contains information about the deregistration of AMIs.
-- `deleteSnapshots_TIMESTAMP.txt`: (Currently commented out in the code) Would contain information about the deletion of unattached snapshots.
-
-## How to Run
-
-Execute the script in a Python environment. Ensure that the necessary dependencies (Boto3 and others) are installed.
-
-```bash
-python script_name.py
-```
-
-**Note:** Make sure to have the appropriate AWS credentials configured on your system.
-
-Feel free to customize the script to fit your specific needs and always exercise caution when performing cleanup operations in a production environment.
+Happy coding with Boto3 and AWS!
