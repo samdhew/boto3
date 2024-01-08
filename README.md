@@ -22,8 +22,4 @@ Clone the repository to your local environment and navigate through the script f
 
 If you have additional scripts or improvements to existing ones, we encourage you to contribute to the repository. Fork the project, make your changes, and submit a pull request. Let's collaborate to make this repository a valuable resource for the AWS developer community.
 
-## License
-
-This repository is licensed under the [MIT License](LICENSE). Feel free to use, modify, and share the scripts in accordance with the license terms.
-
 Happy coding with Boto3 and AWS!
